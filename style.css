@@ -1,0 +1,50 @@
+body{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  color: #000066;
+  margin: 0;
+  font-size: 16px;
+}
+header{
+  background-image: url('amalap_pic.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 100%;
+  padding-top: 30px;
+  font-size: 50px;
+}
+header h1{
+  color: #fff;
+  font-size: 50px;
+  line-height: 10vh;
+  text-align: center;
+  letter-spacing: 2.5px;
+}
+a:link{
+  color: #0000FF;
+}
+a:visited{
+  color: #3E1C26;
+}
+a:hover{
+  color: #ff8000;
+}
+table{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 60%;
+  padding: 4px;
+  border-spacing: 5px;
+}
+th, td{
+  padding: 4px;
+}
+table, th, td {
+  border: 1px  solid black;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
