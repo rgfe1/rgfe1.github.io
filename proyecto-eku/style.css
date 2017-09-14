@@ -1,0 +1,215 @@
+* {
+  box sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  color:#000d66;
+  -webkit-font-smoothing:antialiased;
+  font-family: 'Noto Sans', sans-serif;
+  /*background-color: rgba(102, 204, 0, .1);*/
+}
+
+header {
+  background: linear-gradient(rgba(97, 144, 232, .9), rgba(167, 191, 232, .8)),
+  url('teamanael.jpg');
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 90px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2.5px;
+  font-weight: bolder;
+  margin-top: 85px;
+}
+
+.logo h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #165276;
+}
+
+h1, h2 {
+  letter-spacing: 2.5px;
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 2.5px;
+}
+
+p {
+  font-size: 20px;
+  color: #555555;
+}
+
+nav {
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.01);
+  left: 0;
+  right: 0;
+}
+
+nav a {
+  margin-right: 35px;
+  letter-spacing: 1.2px;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.navegacion {
+  float: right;
+}
+
+nav a:link {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #3E1C26;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+section {
+  display:flex;
+  justify-content:space-between;
+}
+
+.info {
+  margin-top: 120px;
+  margin-left: 90px;
+  margin-right: 90px;
+
+}
+.columna {
+  width: 53%;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.columna i{
+  /*color: #4d79ff;*/
+  color: #5c5cd6;
+}
+
+#servicios {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+  padding-top: 130px;
+  text-align-last: center;
+  background-color: rgba(204, 232, 232, .3);
+}
+
+#servicios h2 {
+  float: right;
+  margin-right: 150px;
+  margin-top: 60px;
+}
+#servicios img {
+  float: left;
+  margin-left: 150px;
+  /*box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+/*la foto no toma el estilo que le digo*/
+  /*background-color: linear-gradient(rgba(204, 232, 232, .9), rgba(102, 204, 0, .5)),*/
+  /*url('escrisimple.jpg');*/
+}
+
+#servicios img:hover {
+  box-shadow: 2.5px 2.5px 12px 0px rgba(46,61,73,0.2);
+}
+
+#servicios p {
+  float: right;
+  margin-right: 180px;
+}
+
+#recursosgratis {
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(204, 232, 232, .3);
+}
+
+#recursosgratis h2 {
+  float: right;
+  margin-right: 200px;
+  margin-top: 50px;
+}
+
+#recursosgratis img {
+  float: left;
+  margin-left: 150px;
+  box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+}
+
+#recursosgratis img:hover {
+  box-shadow: 2.5px 2.5px 12px 0px rgba(46,61,73,0.2);
+}
+
+
+#recursosgratis p {
+  float: right;
+  margin-right: 130px;
+  }
+
+#blog {
+  margin: 0 auto;
+  width: 100%;
+  height: 500px;
+  margin-top: 5px;
+  padding-top: 80px;
+}
+
+#blog span {
+  color: #5c5cd6;
+  font-weight: bold;
+}
+
+#blog img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*como dar linear gradient a varias fotos*/
+/*#blog img {
+  background: linear-gradient(rgba(255, 255, 255, .5), rgba(102, 204, 0, .5)),
+  url('openbook.jpg'), url('womanflor.jpg'), url('camino.jpg'), url('magia.jpg');
+}*/
+
+.redes-sociales a {
+  color: #9c9e9c;
+  height: 50px;
+  margin: 10px;
+  width: 100px;
+  font-size: 40px;
+}
+
+.redes-sociales a:hover {
+  color: #ff8000;
+}
+
+footer {
+  /*background-color: #165276;*/
+  padding: 30px 15px;
+  background-color: #4e4f4e;
+}
+
+footer p {
+  color: #9c9e9c;
+}
