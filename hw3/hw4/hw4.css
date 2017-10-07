@@ -1,0 +1,5 @@
+@namespace wt url(http://www.ccsf.edu/west);
+@namespace et url(http://www.ccsf.edu/east);
+
+wt|name { background-color: yellow; color: blue; }
+et|name { background-color: skyblue; color: red; }
