@@ -26,7 +26,7 @@ span{
     color: red;
 }
 h2:last-of-type {
-    font-size: 1.875em;
+    font-size: 4.3rem;
 }
 table {
     background-color: #FFFF00;
@@ -50,7 +50,7 @@ to {background: green; color: white;}
 }
 table
 {
-animation: myfirst 5s;
+animation: myfirst 5s forwards;
 }
 @keyframes mysecond
 {
