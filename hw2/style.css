@@ -26,7 +26,8 @@ span{
     color: red;
 }
 h2:last-of-type {
-    font-size: 4.3rem;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 table {
     background-color: #FFFF00;
