@@ -5,7 +5,7 @@ body a:link {
     color: red;
 }
 body a:visited {
-    color: white;
+    color: blue;
 }
 
 body h1 {
@@ -26,7 +26,7 @@ span{
     color: red;
 }
 h2:last-of-type {
-    font-size: 1.875rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 table {
