@@ -70,10 +70,10 @@ tr:nth-child(even){
 }
 
 section p:first-letter{
-  font-size: 3.125rem; /*look at the units*/
+  font-size: 3.12rem; 
   color:#FF0000;
   font-style: italic;
-  font-weight: bolder; /*is it the same to strong?*/
+  font-weight: bolder; 
   text-align:left;
 }
 
@@ -98,7 +98,6 @@ footer p:last-of-type{
 }
 
 footer{
-/*    background: linear-gradient(white, #CCFFFF);*/
   position: inherit;
   height: 122px;
   padding-bottom: 0;
