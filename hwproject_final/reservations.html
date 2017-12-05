@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pacific Trails Resort</title>
+  <meta name="description" content="Form to obtain information from customers"/>
+  <meta charset= "utf-8">
+  <link rel="stylesheet" href="pacific.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="header">
+      <h1>Pacific Trails Resort</h1>
+    </div>
+    <div id="flexbox">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="yurts.html">Yurts</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+        </div>
+        <div id="content">
+          <h2>Reservations</h2>
+          <p>Please fill out the following information to make your reservation:</p>
+          <form id="form" action="contact.php" method="post"  title="Pacific Trails Resort - Reservations Form">
+            <fieldset>
+              <legend>Personal Information</legend>
+              <p><label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" size="35" maxlength="40" placeholder= "First Name" required oninvalid="this.setCustomValidity('First Name is required')" oninput="setCustomValidity('')" /></p>
+              <p><label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" size="35" maxlength="40" placeholder="Last Name" required oninvalid="this.setCustomValidity('Last Name is required')" oninput="setCustomValidity('')" /></p>
+              <p><label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" size="35" maxlength="40" placeholder="Email" required oninvalid="this.setCustomValidity('Email is required')" oninput="setCustomValidity('')" /></p>
+              <p><label for="phone">Telephone Number:</label>
+            <input type="text" id="phone" name="phone" size="10" maxlength="15" required oninvalid="this.setCustomValidity('Telephone is required')" oninput="setCustomValidity('')" /></p>
+              <p><label for="guests">Number of Guests:</label>
+            <input type="number"  id="guests" name="guests" min="2" max="99" required oninvalid="this.setCustomValidity('Number of guests is required')" oninput="setCustomValidity('')" /></p>
+            </fieldset>
+            <div id="submit">
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+            </div>
+          </form>
+          <div id="footer">
+            <p>Copyright &copy; 2011 Pacific Trails Resort<br>
+               webmaster name</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
