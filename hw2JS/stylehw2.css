@@ -1,0 +1,107 @@
+html,body,header,nav,ul,li,h1,p,a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+body {
+  font-size: 1em;
+  margin-top: 50px;
+  text-align: center;
+  color: #8D80AD;
+  background-color: #ccffff;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Times New Roman', sans-serif;
+}
+.content {
+  background-color: #ffffff;
+  max-width: 750px;
+  border : #8D80AD dashed 1.5px;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+nav {
+  background-color: #d3d3d3;
+  font-weight: bold;
+  width: 400px;
+  margin: auto;
+}
+a {
+  letter-spacing: 1.2px;
+  font-size: 1em;
+  text-decoration: none;
+  line-height: 20px;
+  padding-left: 5px;
+}
+a:link {
+  color: #544C67;
+}
+a:visited {
+  color: #8D80AD;
+}
+a:hover {
+  color: #544C67;
+}
+ul li {
+  list-style-type: none;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  text-align: left;
+  margin-left: 100px;
+}
+h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+p {
+  padding-bottom: 20px;
+  font-size: 1.2em;
+}
+.title {
+  margin-top: 20px;
+}
+.table {
+  max-width: 750px;
+  margin: auto;
+  width: 350px;
+  text-align: left;
+  border-collapse: collapse;
+}
+.results {
+  text-align: left;
+}
+.results input, button {
+  margin-left: 12px;
+}
+.tableextra {
+  max-width: 750px;
+  margin: auto;
+  width: 350px;
+  text-align: left;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.tableextra td, th {
+    border: 1px solid gray
+}
+.extratitle {
+  text-align: center;
+  height: 25px;
+}
+.subtitle {
+  text-align: center;
+}
+#british, #canadian, #euro, #japanese, #mexican{
+  float: right;
+  text-align: right;
+}
+.currency {
+  text-align: right;
+}
+#usdollar {
+  float: right;
+  text-align: right;
+}
