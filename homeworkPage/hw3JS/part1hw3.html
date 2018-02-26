@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 3, Student Grades' Webpage">
+  <title>Part 1 - CNIT 133 - Homework 3</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw3.css">
+
+  <!--JQuery to define a 'click to fade results' button on the form   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+  });
+  </script>
+
+  <script>
+  function process() {
+    var hwAvg, midExam, finalExam, ACR, finalAvg, finalGrade;
+
+    hwAvg = document.forms["myform"].elements["hwAvg"].value;
+    midExam = document.forms["myform"].elements["midExam"].value;
+    finalExam = document.forms["myform"].elements["finalExam"].value;
+    ACR = document.forms["myform"].elements["ACR"].value;
+
+// Convert input string to numeric
+    var arr = [];
+    arr.push(hwAvg);
+    arr.push(midExam);
+    arr.push(finalExam);
+    arr.push(ACR);
+
+    if (verifyData(arr)) {
+      var finalAverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR);
+      var finalGrade = determineGrade(finalAverage);
+      document.forms["myform"].elements["outputScore"].value = finalAverage.toFixed();
+      document.forms["myform"].elements["outputGrade"].value = finalGrade;
+
+      if (finalGrade === 'D' || finalGrade === 'F') {
+        document.getElementById('retake').innerHTML = "Student must retake the course.";
+      }
+      else {
+        resetAction();
+      }
+      }
+      else {
+        document.getElementById("retake").innerHTML = "Invalid input. Please enter a number between 1 and 100.";
+      }
+    }
+
+    function verifyData(arr) {
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i].length === 0 || isNaN(arr[i]) || parseInt(arr[i]) < 0 || parseInt(arr[i]) > 100) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function determineGrade(score) {
+      if (score > 100 || score < 0) {
+        return null;
+      }
+      else if (score >= 90) {
+        return 'A';
+      }
+      else if (score >= 80) {
+        return 'B';
+      }
+      else if (score >= 70) {
+        return 'C';
+      }
+      else if (score >= 60) {
+        return 'D';
+      }
+      else {
+        return 'F';
+      }
+    }
+
+    function resetAction() {
+      document.getElementById('retake').innerHTML = "<BR>";
+    }
+  </script>
+
+
+</head>
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw3.html">Part 1</a> -
+      <a href="part2hw3.html">Part 2</a> -
+      <a href="part3hw3.html">Part 3</a> -
+      <a href="part4hw3.html">Part 4</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 3 Functions</h1></header>
+    <h3>Student Grades</h3>
+
+    <div>
+      <!-- Table to display 'Click to Show/Hide Instructions' using JQuery -->
+      <table class="hideinst">
+        <tr>
+          <td class="JQuery_hideinst">
+            <div id="flip">Click to show/hide instructions</div>
+            <div id="panel">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)</div>
+          </td>
+          </tr>
+      </table>
+
+      <div class="studentgrades">
+        <form id="myform" onreset="resetAction();">
+          <table class="tableStudentGrades">
+            <tr>
+              <td class="right">Homework Average:</td>
+              <td class="box"><input class="grade" type="text" name="hwAvg" size="8">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="right">Mid-Term Exam: </td>
+              <td class="box"><input class="grade" type="text" name="midExam" size="8">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="right">Final Exam: </td>
+              <td class="box"><input class="grade" type="text" name="finalExam" size="8">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="right">ACR: </td>
+              <td class="box"><input class="grade" type="text" name="ACR" size="8">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <input class="submit" type="button" onclick="process()" value="Submit">
+                <input class="reset" type="reset" value="Reset">
+              </td>
+            </tr>
+
+            <tr>
+              <td>Results:</td>
+              <td class="results">
+                <input class="grade" type="text" size="1" readonly name="outputScore">
+                <input class="grade" type="text" size="1" readonly name="outputGrade">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <table class="studentgrades">
+        <tr>
+          <td>
+            <div id="retake"><br>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p class="title">Part 1 - Student Grades' Webpage: inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw2JS.html/indexhw2.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

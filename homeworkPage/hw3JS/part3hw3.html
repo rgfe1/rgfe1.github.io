@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 3, Temperature Conversion using form text boxes">
+  <title>Part 3 - CNIT 133 - Homework 3</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw3.css">
+
+  <script>
+  function process(conversionType) {
+    var temp = document.forms["form_temperature"].elements["tempInput"].value;
+
+    if (!verifyInput(temp)) {
+      document.getElementById("invalid_input").innerHTML = "Please input a numeric value";
+    }
+    else {
+      resetAction();
+      var result = conversionType === "c" ? celsius(parseInt(temp)) : fahrenheit(parseInt(temp));
+      document.forms["form_temperature"].elements["tempOutput"].value = result.toFixed(2);
+    }
+  }
+
+  function celsius(f) {
+    return 5 / 9 * (f - 32);
+  }
+
+  function fahrenheit(c) {
+    return (9/5 * c) + 32;
+  }
+
+  function resetAction() {
+    document.getElementById('invalid_input').innerHTML = "<BR>";
+  }
+
+  function verifyInput(input) {
+    if (input.length === 0 || isNaN(input)) {
+      return false;
+    }
+    return true;
+  }
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw3.html">Part 1</a> -
+      <a href="part2hw3.html">Part 2</a> -
+      <a href="part3hw3.html">Part 3</a> -
+      <a href="part4hw3.html">Part 4</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 3 Functions</h1></header>
+    <h3>Temperature Conversion</h3>
+
+
+    <div class="form">
+      <form id="form_temperature" onreset="resetAction();">
+
+        <p class="instruction">Enter a temperature to convert,<br>then click on one of the buttons below:
+        </p>
+
+        <input class="temp_inout" type="text" size="10" name="tempInput">
+        <input class="temp_inout" type="text" size="10" readonly name="tempOutput">
+        <p>
+          <input type="button" onclick="process('f')" value="Celsius to Fahrenheit">
+        </p>
+        <p>
+          <input type="button" onclick="process('c')" value="Fahrenheit to Celsius">
+        </p>
+        <p>
+          <input type="reset" value="Reset">
+        </p>
+      </form>
+    </div>
+    <div id="invalid_input"><br>
+    </div>
+
+    <p class="title">Part 3 - Temperature Conversion: Using form text boxes</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw2JS.html/indexhw2.html">Back to CNIT133 Homework Page</a>
+    </p>
+  </div>
+</body>
+</html>

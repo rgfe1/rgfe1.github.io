@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 3, Salesperson's Website">
+  <title>Part 2 - CNIT 133 - Homework 3</title>
+	<link rel="stylesheet" type = "text/css" href="stylehw3.css">
+
+	<!-- jQuery CSS theme; to give style to the tooltip -->
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+
+	<!-- Link to JQuery UI and codes: To obtain the total by week -->
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- the following script is needed for jquery validation of input -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+	<!-- JQuery for tool tip  -->
+	<script>
+		$(function () {
+			$(document).tooltip();
+		});
+	</script>
+
+<script>
+$(document).ready(function() {
+  $("#myform").validate({
+    // Rules for each input item↩
+    rules: {
+      num_item1: { required: true, number: true },
+      num_item2: { required: true, number: true },
+      num_item3: { required: true, number: true },
+      num_item4: { required: true, number: true }
+    }
+  });
+});
+
+function getSales() {
+  if ($("#myform").valid()) {
+    // declare/define variables and get input number from getElementById
+    var item1 = parseFloat(document.getElementById("num_item1").value);
+    var item2 = parseFloat(document.getElementById("num_item2").value);
+    var item3 = parseFloat(document.getElementById("num_item3").value);
+    var item4 = parseFloat(document.getElementById("num_item4").value);
+
+    //Multiply to get the total amount for each item and round to 2 digits
+    var total_item1 = parseFloat(item1 * 239.99).toFixed(2)
+    var total_item2 = parseFloat(item2 * 129.75).toFixed(2)
+    var total_item3 = parseFloat(item3 * 99.95).toFixed(2)
+    var total_item4 = parseFloat(item4 * 350.89).toFixed(2)
+
+    //Calculate the total amount and total by week, round to 2 digits
+    var final_total = (item1 + item2 + item3 + item4);
+    var salary = (((+total_item1 + +total_item2 + +total_item3 + +total_item4)*.09) + 200).toFixed(2);
+
+    //Show results in form fields
+    document.getElementById("t1").value = item1;
+    document.getElementById("t2").value = item2;
+    document.getElementById("t3").value = item3;
+    document.getElementById("t4").value = item4;
+
+    document.getElementById("total_item1").value = total_item1;
+    document.getElementById("total_item2").value = total_item2;
+    document.getElementById("total_item3").value = total_item3;
+    document.getElementById("total_item4").value = total_item4;
+
+    document.getElementById("final_total").value = final_total;
+    document.getElementById("salary").value = salary;
+
+// Asking for valid input, when the user didn't enter anything
+		var userInput = document.getElementById("num_item1").value;
+		if (userInput == "") {
+		window.alert("Please enter a valid number in item1 field.");
+		}
+		var userInput = document.getElementById("num_item2").value;
+		if (userInput == "") {
+		window.alert("Please enter a valid number in item2 field.");
+		}
+		var userInput = document.getElementById("num_item3").value;
+		if (userInput == "") {
+		window.alert("Please enter a valid number in item3 field.");
+		}
+		var userInput = document.getElementById("num_item4").value;
+		if (userInput == "") {
+		window.alert("Please enter a valid number in item4 field.");
+		}
+  }
+}
+</script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw3.html">Part 1</a> -
+      <a href="part2hw3.html">Part 2</a> -
+      <a href="part3hw3.html">Part 3</a> -
+      <a href="part4hw3.html">Part 4</a>
+    </nav>
+
+  <header><h1>CNIT 133 Homework 3 Functions</h1></header>
+  <h3>Salesperson Commissions</h3>
+
+
+  <div class="salesform">
+    <form id="myform" name="myform">
+      Salesperson:
+      <input id="NameSalesperson" name="Name" title="Please make sure that the salesperson's name is spelled correctly" size="30" class="left">
+
+      <p class="inputitems">Please input the number of items sold for each item number:</p>
+
+      Item 1: <input class="t" type="text" id="num_item1" name="num_item1" size="8"><br>
+      Item 2: <input class="t" type="text" id="num_item2" name="num_item2" size="8"><br>
+      Item 3: <input class="t" type="text" id="num_item3" name="num_item3" size="8"><br>
+      Item 4: <input class="t" type="text" id="num_item4" name="num_item4" size="8"><br><br>
+      <input type="button" onclick="getSales()" onblur="window.location.reload()" value="Submit">
+      <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
+
+      <table id="salesperson">
+        <tr>
+          <th>Item #</th>
+          <th>Price</th>
+          <th>Number Sold</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>$239.99</td>
+          <td><input class="t" type="number" id="t1" name="int_item1"></td>
+          <td><input class="t" type="number"  id="total_item1" name="total_item1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>$129.75</td>
+          <td><input class="t" type="number" id="t2" name="int_item2"></td>
+          <td><input class="t" type="number"  id="total_item2" name="total_item2"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>$99.95</td>
+          <td><input class="t" type="number" id="t3" name="int_item3"></td>
+          <td><input class="t" type="number"  id="total_item3" name="total_item3"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>$350.89</td>
+          <td><input class="t" type="number" id="t4" name="int_item4"></td>
+          <td><input class="t" type="number" id="total_item4" name="total_item4"></td>
+        </tr>
+        <tr>
+          <td class="total_sales" colspan="3">Total Amount Sold:</td>
+          <td><input class="t" type="number" id="final_total" name="final_total"></td>
+        </tr>
+        <tr>
+          <td class="total_sales" colspan="3">Total Weekly Earnings:</td>
+          <td><input class="t" type="number" id="salary" name="salary"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+    <p class="title">Part 2 - Salesperson's Website</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw2JS.html/indexhw2.html">Back to CNIT133 Homework Page</a>
+    </p>
+  </div>
+</body>
+</html>

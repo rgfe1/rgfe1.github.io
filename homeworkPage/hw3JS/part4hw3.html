@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 4, Multiplication Table for an elementary school student">
+  <title>Part 4 - CNIT 133 - Homework 3</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw3.css">
+
+  <script>
+  function process() {
+  var result = document.forms["form_multiplication"].elements["result"].value;
+
+  document.getElementById("form_multiplication").reset();
+
+  if (!verifyInput(result)) {
+    document.getElementById("messageResult").innerHTML = "Invalid input.";
+  }
+  else {
+    var newNumbers = document.getElementById("newNumbers").innerHTML.substring(0,5).split("*");
+    if (parseInt(result) === (parseInt(newNumbers[0]) * parseInt(newNumbers[1]))) {
+      document.getElementById("messageResult").innerHTML = "Very good!";
+      generateNewNumbers();
+    }
+    else {
+      document.getElementById('messageResult').innerHTML = "Almost... Please try again.";
+    }
+  }
+}
+
+function generateNewNumbers() {
+  document.getElementById("newNumbers").innerHTML = (rInt() + " * " + rInt() + " ?");
+}
+
+function rInt() {
+  return (Math.random() * 9).toFixed();
+}
+
+function resetAction() {
+  document.getElementById('messageResult').innerHTML = "<BR>";
+}
+
+function verifyInput(input) {
+  if (input.length === 0 || isNaN(input)) {
+    return false;
+  }
+  return true;
+}
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw3.html">Part 1</a> -
+      <a href="part2hw3.html">Part 2</a> -
+      <a href="part3hw3.html">Part 3</a> -
+      <a href="part4hw3.html">Part 4</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 3 Functions</h1></header>
+    <h3>Multiplication Table</h3>
+
+
+    <div class="form">
+
+      <form id="form_multiplication" onreset="resetAction();">
+
+        <P>What is the product of multiplying...</p>
+
+        <div id="newNumbers"><script>generateNewNumbers();</script><br>
+        </div>
+
+        <input type="number" size="8" name="result">
+        <input type="button" onclick="process();" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+
+      <div id="messageResult"><br>
+      </div>
+    </div>
+
+    <p class="title">Part 4 - Multiplication Table for an elementary school student</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw2JS.html/indexhw2.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>
