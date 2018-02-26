@@ -57,7 +57,7 @@ function getSales() {
 
     //Calculate the total amount and total by week, round to 2 digits
     var final_total = (item1 + item2 + item3 + item4);
-    var salary = (((+total_item1 + +total_item2 + +total_item3 + +total_item4)*.09) + 200).toFixed(2);
+    var salary = (((total_item1 + total_item2 + total_item3 + total_item4)*.09) + 200).toFixed(2);
 
     //Show results in form fields
     document.getElementById("t1").value = item1;
