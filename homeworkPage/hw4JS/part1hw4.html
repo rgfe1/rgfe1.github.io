@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 4, Exercise using for and while or do while statements">
+  <title>Part 1 - CNIT 133 - Homework 4</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw4.css">
+  <link rel="stylesheet"   href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Code for jQuery UI draggable -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+  $( "#draggable" ).draggable();
+  } );
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw4.html">Part 1</a> -
+      <a href="part2hw4.html">Part 2</a> -
+      <a href="part3hw4.html">Part 3</a> -
+      <a href="extracredithw4.html">Extra Credit</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 4 Looping Statements</h1></header>
+    <h3>Sum and Product of Integers</h3>
+
+    <div id="draggable" class="ui-widget-content">
+      <p>This text is draggable... You can use your mouse to move it!</p>
+    </div>
+      <script>
+      var sum = 0;
+      var product = 1;
+
+      for (var i = 5; i <= 20; i += 3) {
+        sum += i;
+        product *= i;
+      }
+      document.write( "<h3>PART1a:</h3>" + " " + " The result of " + " " + " 5 * 8 * 11 * 14 * 17 * 20 is:  " + " " + product + ";" );
+      document.write( "<br> " + " the result of " + " " + " 5 + 8 + 11 + 14 + 17 + 20 is:  " + " " + sum  );
+
+      var sum2 = 0;
+      var product2 = 1;
+      var i = 3;
+      while (i <= 31) {
+        sum2 += i;
+        product2 *= i;
+        i += 4;
+      }
+      document.write( "<h3>PART1b:</h3>" + " " + " The result of " + " " + " 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 is:  " + " " +  product2 + ";" );
+      document.write( "<br>  " +  " the result of " + " " + " 3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 is:  " + " " + sum2 );
+      </script>
+
+    <p class="title">Part 1 - Exercise using for and while or do while statements</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw4JS/indexhw4.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 4, Switch statement to determine retail price in a product">
+  <title>Part 3 - CNIT 133 - Homework 4</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw4.css">
+
+  <script>
+  function calculateTotal() {
+  resetAction();
+
+  var data = [];
+  var products = [];
+  var total = 0;
+  var prices = [ 2.98, 4.50, 9.98, 4.49, 6.87 ];
+
+  for (var i = 1; i <= 5; i++) {
+    products.push(document.forms["myform"].elements["prod0" + i].value);
+  }
+
+  for (var i = 0; i < products.length; i++) {
+    switch (products[i]) {
+      case "1":
+      data.push(document.forms["myform"].elements["qty01"].value);
+      break;
+      case "2":
+      data.push(document.forms["myform"].elements["qty02"].value);
+      break;
+      case "3":
+      data.push(document.forms["myform"].elements["qty03"].value);
+      break;
+      case "4":
+      data.push(document.forms["myform"].elements["qty04"].value);
+      break;
+      case "5":
+      data.push(document.forms["myform"].elements["qty05"].value);
+      default:
+    }
+  }
+
+  for (var i = 0; i < data.length; i++) {
+    if (!verifyInput(data[i])) {
+      document.getElementById("invalid").innerHTML = "Please enter a valid number";
+      return;
+    }
+  }
+
+  for (var i = 0; i < data.length; i++) {
+    var currentAmount = data[i] * prices[i];
+    document.forms["myform"].elements["totalNum0" + (i + 1)].value = currentAmount.toFixed(2);
+
+    total += currentAmount;
+  }
+
+  document.forms["myform"].elements["total"].value = total.toFixed(2);
+  }
+
+  function verifyInput(input) {
+    if (input.length === 0 || isNaN(input) || input < 0) {
+      return false;
+    }
+    return true;
+  }
+
+  function resetAction() {
+    document.getElementById("invalid").innerHTML = "<br>";
+  }
+</script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw4.html">Part 1</a> -
+      <a href="part2hw4.html">Part 2</a> -
+      <a href="part3hw4.html">Part 3</a> -
+      <a href="extracredithw4.html">Extra Credit</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 4 Looping Statements</h1></header>
+    <h3>Using switch statement</h3>
+
+    <form id="myform" onreset="resetAction();">
+      <table class="mailorder">
+        <tr>
+          <th>Product #</th>
+          <th>Quantity </th>
+          <th>Price</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="prod01" name="prod01" size="5" readonly value="1"></td>
+          <td><input type="text" id="qty01" name="qty01" size="15">
+          </td><td>$2.98</td>
+          <td><input type="text" id="amount01" readonly name="totalNum01" size="15"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="prod02" name="prod02" size="5" readonly value="2"></td>
+          <td><input type="text" id="qty02" name="qty02" size="15"></td>
+          <td>$4.50</td>
+          <td><input type="text" id="amount02" readonly name="totalNum02" size="15"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="prod03" name="prod03" size="5" readonly value="3"></td>
+          <td><input type="text" id="qty03" name="qty03" size="15"></td>
+          <td>$9.98</td>
+          <td><input type="text" id="amount03" readonly name="totalNum03" size="15"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="prod04" name="prod04" size="5" readonly value="4"></td>
+          <td><input type="text" id="qty04" name="qty04" size="15"></td>
+          <td>$4.49</td>
+          <td><input type="text" id="amount04" readonly name="totalNum04" size="15"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="prod05" name="prod05" size="5" readonly value="5"></td>
+          <td><input type="text" id="qty05" name="qty05" size="15"></td>
+          <td>$6.87</td>
+          <td><input type="text" id="amount05" readonly name="totalNum05" size="15"></td>
+        </tr>
+        <tr>
+          <td class="total" colspan="3">Total Amount Sold</td>
+          <td><input type="text" id="total" readonly name="total" size="15"></td>
+        </tr>
+      </table>
+
+      <div class="buttons">
+        <input type="button" class="calculateButton" onclick="calculateTotal()" value="Calculate Total Sold">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+
+    <br>
+    <div id="invalid">
+      <br>
+    </div>
+
+    <p class="title">Part 3 - Switch statement to help determine the retail price in a product</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw4JS/indexhw4.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>
