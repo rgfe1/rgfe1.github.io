@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 5, Arrays">
+  <title>CNIT 133 - Homework 5</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw5.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+  <script>
+  $(document).ready(function() {
+  $(function() {
+    $("form").submit(function() { return false; });
+  });
+});
+
+
+
+function process(form) {
+
+  var output = "Below is your input: <br>";
+  var option = document.forms["myform"].elements["option"].value;
+  var name = document.forms["myform"].elements["textinput"].value;
+  var colors = document.forms["myform"].elements["colors"].value;
+  var musical = [];
+
+  $("input:checkbox[name=musical]:checked").each(function(){
+    musical.push($(this).val());
+  });
+
+  if (name.length > 0 && option && colors !== "-" && musical) {
+    output += "City: " + name + "<br>Favorite Option: " + option + "<br>" +
+              "Color: " + colors + "<br>Musical Genre: ";
+    for (var i = 0; i < musical.length; i++) {
+      output += "<br>" + musical[i];
+    }
+    document.getElementById("output").innerHTML = output;
+  }
+  else {
+    document.getElementById("output").innerHTML = "Please complete all fields";
+  }
+
+}
+</script>
+
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw5.html">Part 1</a> -
+      <a href="part2hw5.html">Part 2</a> -
+      <a href="part3hw5.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 5 Arrays</h1></header>
+    <h3>Input text box, radio buttons, checkboxes, and select items</h3>
+
+    <form id="myform" action="#" method="post" onreset="resetAction();">
+      <p> Please enter a city:</p>
+      <input type="text" id="textinput" size="15" required>
+      <p>Select your favorite option:</p>
+      <div class="favOption">
+        <input type="radio" name="option" value="reading"> Reading<br>
+        <input type="radio" name="option" value="writing"> Writing<br>
+        <input type="radio" name="option" value="drawing"> Drawing<br>
+        <input type="radio" name="option" value="other"> Other<br>
+      </div>
+
+      <p>Select all the musical genres that apply:</p>
+      <div class="musicalGenre">
+        <input type="checkbox" name="musical" value="classical">Classical<br>
+        <input type="checkbox" name="musical" value="disco">Disco<br>
+        <input type="checkbox" name="musical" value="folk">Folk<br>
+        <input type="checkbox" name="musical" value="reggae">Reggae<br>
+        <input type="checkbox" name="musical" value="bossa"> Bossa Nova
+      </div>
+      <p>Choose one color:</p>
+      <select name="colors">
+        <option value="-">-</option>
+        <option value="white">White</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="red">Red</option>
+        <option value="purple">Purple</option>
+      </select>
+      <p><input type="submit" onclick="process(this.form);"></p>
+    </form>
+
+    <div id="output"><br></div>
+
+    <p class="title">Part 1 - Webpage containing a form that displays an input text box, <br>radio buttons, checkboxes, and select items</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw5JS/indexhw5.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

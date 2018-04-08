@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 5, Arrays">
+  <title>CNIT 133 - Homework 5</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw5.css">
+  <script>
+  function goToNewPage(myForm) {
+    var myDestination = myForm.selectList.options[myForm.selectList.selectedIndex].value;
+    window.location = myDestination;
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw5.html">Part 1</a> -
+      <a href="part2hw5.html">Part 2</a> -
+      <a href="part3hw5.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 5 Arrays</h1></header>
+    <h3>2 pulldown menus: Using onChange and onClick event handler</h3>
+
+    <form>
+      <h4>Please select from the list (using onChange event handler)</h4>
+      <select name="selectList" onChange="goToNewPage(this.form);">
+        <option>Choose a Destination:</option>
+        <option value="https://sfpl.org/">SF Public Library</option>
+        <option value="https://www.ccsf.edu/">CCSF</option>
+        <option value="http://www.ccsf.edu/cnit">CNIT</option>
+        <option value="http://www.sfsu.edu/">SF State University</option>
+      </select>
+    </form>
+    <br>
+    <form>
+      <h4>Please select one Museum (using onClick event handler)</h4>
+      <select name="selectList">
+        <option value="https://deyoung.famsf.org/">deYoung</option>
+        <option value="https://www.sfmoma.org/">SFMOMA</option>
+        <option value="https://legionofhonor.famsf.org/">Legion of Honor</option>
+        <option value="https://www.calacademy.org/">Academy of Sciences</option>
+      </select>
+
+      <input type="button" value="Go" onClick="goToNewPage(this.form);">
+    </form>
+
+
+    <p class="title">Part 2 - Webpage that contains a script that utilizes 2 pulldown menus</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw5JS/indexhw5.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 5, Arrays">
+  <title>CNIT 133 - Homework 5</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw5.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+var censusArray = [ ["AL", "ALABAMA", "Montgomery", "4,779,736"],
+                ["AK", "ALASKA", "Juneau", "710,231"],
+                ["AZ", "ARIZONA", "Phoenix", "6,392,017"],
+                ["AR", "ARKANSAS", "Little Rock", "2,915,918"],
+                ["CA", "CALIFORNIA", "Sacramento", "37,253,956"],
+                ["CO", "COLORADO", "Denver", "5,029,196"] ];
+
+function ButtonPressed()
+{
+  var searchKey = document.forms["SearchForm"].elements["stateName"].value;  //get searchkey from form input box
+  searchKey = searchKey.toUpperCase();     //change search key to upper case
+
+  var found = false;
+  for (var row = 0; row < censusArray.length; row++) //loop for 6 rows
+   {
+    if ((censusArray[row][0] == searchKey) || (censusArray[row][1] == searchKey))
+    //check if search key = 1st or 2nd element of each row
+    {
+
+    //if search key = 1st or 2nd element of a particular row
+    //then place in input boxes for state name, capital, population and comment, that is, the 2nd, 3rd and 4th elements↩
+
+    document.forms["SearchForm"].elements["state"].value = censusArray[row][1];
+    document.forms["SearchForm"].elements["capital"].value = censusArray[row][2];
+    document.forms["SearchForm"].elements["population"].value = censusArray[row][3];
+    row = censusArray.length;   //ends loop if match found↩
+    found = true;
+     }
+    }
+
+    if ( found == false ) {
+      document.forms["SearchForm"].elements["comment"].value= "Please enter a valid state";
+     }
+    }
+</script>
+
+<script>
+$(function() {
+  $( "#dialog" ).dialog({
+  autoOpen: false,
+  show: {
+    effect: "blind",
+    duration: 1000
+  },
+
+  hide: {
+    effect: "explode",
+    duration: 1000
+  }
+ });
+
+ $( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+  });
+ });
+</script>
+
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw5.html">Part 1</a> -
+      <a href="part2hw5.html">Part 2</a> -
+      <a href="part3hw5.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 5 Arrays</h1></header>
+    <h3>U.S. Census Info - Year 2010</h3>
+
+    <button id="opener">Click for instructions</button>
+
+    <div id="dialog" title="Instructions">
+      <p>Enter a State abbreviation or name in the field next to the
+      State Info button (lower or upper case is ok)</p>
+    </div>
+    <br><br>
+
+    <table class="stateCensus">
+        <tr>
+          <th>State Abbr</th>
+          <th>State Name</th>
+          <th>Capital</th>
+          <th>Population</th>
+        </tr>
+
+        <tr>
+          <td>AL</td>
+          <td>Alabama</td>
+          <td>Montgomery</td>
+          <td class="population">4,779,736</td>
+        </tr>
+
+        <tr>
+          <td>AK</td>
+          <td>Alaska</td>
+          <td>Juneau</td>
+          <td class="population">710,231</td>
+        </tr>
+
+        <tr>
+          <td>AZ</td>
+          <td>Arizona</td>
+          <td>Phoenix</td>
+          <td class="population">6,392,017</td>
+        </tr>
+
+        <tr>
+          <td>AR</td>
+          <td>Arkansas</td>
+          <td>Little Rock</td>
+          <td class="population">2,915,918</td>
+        </tr>
+
+        <tr>
+          <td>CA</td>
+          <td>California</td>
+          <td>Sacramento</td>
+          <td class="population">37,253,956</td>
+        </tr>
+
+        <tr>
+          <td>CO</td>
+          <td>Colorado</td>
+          <td>Denver</td>
+          <td class="population">5,029,196</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <form name="SearchForm">
+      <input type="text" size="15" name="stateName" autofocus>
+      <input onclick="ButtonPressed();" type="button" value="State Info" name="search" id="search">
+
+      <br><br>
+
+      Name of State<br>
+      <input type="text" size="25" name="state" id="state"><br><br>
+
+      Capital of State<br>
+      <input type="text" size="25" name="capital" id="capital"><br><br>
+
+      Population<br>
+      <input type="text" size="25" name="population" id="population"><br><br>
+
+      Comment<br>
+      <input type="text" size="25" name="comment" id="comment"><br><br>
+
+      <input type="reset" value="Reset" onclick="location.reload();">
+    </form>
+
+    <p class="title">Part 3 - Webpage that contains a table of data about several of the states from the 2010 census</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw5JS/indexhw5.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>
