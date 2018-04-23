@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 6, Objects">
+  <title>CNIT 133 - Homework 6</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw6.css">
+  <script>
+
+  function search()
+  {
+    var count=0;
+    var text=document.getElementById("searchValue").value.toLowerCase().charAt( 0 );
+    text=text.toLowerCase();
+
+    var stringToSearch=document.getElementById("inputText").value.toLowerCase();
+    stringToSearch=stringToSearch.toLowerCase();
+
+    for (i=0; i < stringToSearch.length; i++)
+    {
+      if (stringToSearch.charAt(i) == text)
+      count++;
+    }
+    if ( count == 0 )
+    {
+  	// code HTML to put into new window:
+    var errMessage = "<html>\n";
+    errMessage += "<head>\n";
+    errMessage += "<title>Search Character Not Found</title>\n";
+    errMessage += "</head>\n";
+    errMessage += "<body>\n";
+    errMessage += "<div>\n";
+    errMessage += "<h4>Search character '" + text + "' not found in text string</h4>\n";
+    errMessage += "<input type='button' value='Close Window' onclick='window.close()'>\n";
+    errMessage += "</div>\n";
+    errMessage += "</body>\n";
+    errMessage += "</html>";
+
+    // open window on the upper right of the screen
+    var errWindow = window.open("", "new_window", "width=300,height=100");
+
+    errWindow.focus();
+    // html goes into to this new opened window
+    errWindow.document.write(errMessage);
+    // tell browser that errWindow document is finished loading
+    errWindow.document.close();
+    // Put error msg in input text box
+  	document.getElementById("errOut").value="See popup window";
+  	}
+
+    else
+    // the number of occurrences of the search character within the text
+  	document.getElementById("output").value="The number of occurrences of '" + text + "' within the text is: " + count + ".";
+  }
+
+  function res() {
+    document.getElementById("errOut").innerHTML ="";
+    document.getElementById("inputText").focus();
+    }
+  </script>
+
+</head>
+
+<body onload="document.getElementById('key').focus();">
+  <div class="content">
+    <nav>
+      <a href="part1hw6.html">Part 1</a> -
+      <a href="part2hw6.html">Part 2</a> -
+      <a href="part3hw6.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 6 Objects</h1></header>
+    <h3>Using string method charAt</h3>
+
+    <form id="myform" name="myform">
+      <h4>Type in some text:</h4>
+      <textarea id="inputText" cols="50" rows="10"></textarea>
+      <h4>Type in a search character:
+        <input id="searchValue" type="text" size="10"></h4>
+        <input type="button" value="Search" onclick="search()">
+        <input type="reset" value="Reset" onClick="res();">
+        <br/>
+        <textarea id="output" cols="50"></textarea>
+        <div class="bold">Error Message:
+        <input id="errOut" type="text" size="30">
+       </div>
+    </form>
+
+    <p class="title">Part 2 - String method charAt to determine the number of occurrences of the search character within the text.</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw6JS/indexhw6.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

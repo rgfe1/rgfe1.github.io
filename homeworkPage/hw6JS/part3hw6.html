@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 6, Objects">
+  <title>CNIT 133 - Homework 6</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw6.css">
+
+  <script>
+  function parseNumber() {
+    var errMsg = "Wrong format. Use (999) 999-9999.";
+
+  	var num = document.getElementById("input").value;
+  	var phone = num.toString();
+
+  	var phoneRegExp = /^((\()(\d{3})(\)))((\s))((\d{3}))((-\d{4}))$/;
+
+  	// test to see if input is in valid format using a regular expression
+  	var tokens = phone.match(phoneRegExp);
+    console.log(tokens);
+
+  	if (tokens != null) {
+      // split phone number
+  		console.log(tokens);
+      var phoneNum = tokens[0];
+  		var areaCode = tokens[3];
+  		var firstThree = tokens[8];
+  		var lastFour = tokens[10];
+
+      // output area code
+      document.getElementById("areaCode").value = areaCode;
+
+      // output seven-digit number extension
+      document.getElementById("phoneNum").value = phoneNum;
+
+      //get first three characters of phone number
+      document.getElementById("firstThree").value = firstThree;
+
+      // output last 4 digits
+      document.getElementById("lastFour").value = lastFour;
+      } else {
+      document.getElementById("errOut").value = errMsg;
+      }
+  }
+
+  function res() {
+    document.getElementById("errOut").innerHTML ="";
+    document.getElementById("input").focus();
+  }
+  </script>
+
+</head>
+
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw6.html">Part 1</a> -
+      <a href="part2hw6.html">Part 2</a> -
+      <a href="part3hw6.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 6 Objects</h1></header>
+    <h3>Using toString(), toLocaleString(), toUTCString() and string method split</h3>
+
+    <script>
+   //output local date and time, UTC date and time, and difference
+    var current = new Date();
+    document.writeln( "Current local date and time: \n" +
+    current.toString() + "<br>Current local time and date: \n" +
+    current.toLocaleString() + "<br>Current UTC time and date: \n" +
+    current.toUTCString() + "<br>Hours difference between Pacific and UTC time zones: " +
+    (current.getTimezoneOffset() / 60) + "<br>Hours difference between Eastern and UTC time zones: " +
+    (current.getTimezoneOffset() - 180) / 60) + "\n";
+
+    </script>
+
+    <br><br>
+    <form id="phoneForm" name="myForm">
+      <table class="phoneTable">
+        <tr>
+          <td>Enter a telephone number <br>
+          [in the form (999) 999-9999]
+          </td>
+          <td>
+            <input id="input" type="text" size="15">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input type="button" value="Split phone number" onclick="parseNumber()">
+          </td>
+        </tr>
+
+        <tr>
+          <td>Area Code:</td>
+          <td><input id="areaCode" type="text" size="15">
+          </td>
+        </tr>
+
+        <tr>
+          <td>Seven-digit:</td>
+          <td><input id="phoneNum" type="text" size="15">
+          </td>
+        </tr>
+
+        <tr>
+          <td>First three digits:</td>
+          <td><input id="firstThree" type="text" size="15">
+          </td>
+        </tr>
+
+        <tr>
+          <td>Last four digits:</td>
+          <td><input id="lastFour" type="text" size="15">
+          </td>
+        </tr>
+
+        <tr>
+          <td>Error Message:</td>
+          <td><input id="errOut" type="text" size="30">
+          </td>
+        </tr>
+
+      </table>
+      <input type="reset" value="Reset" onClick="res();">
+    </form>
+
+    <p class="title">Part 3.1 - Using toString(), toLocaleString() and toUTCString() for the Date object.</p>
+    <p class="title">Part 3.2 - Using string method split: Extracting the different parts of a phone number.</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw6JS/indexhw6.html">Back to CNIT133 Homework Page</a>
+    </p>
+
+  </div>
+</body>
+</html>

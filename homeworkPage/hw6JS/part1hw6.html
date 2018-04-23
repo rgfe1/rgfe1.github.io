@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 6, Objects">
+  <title>CNIT 133 - Homework 6</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw6.css">
+
+  <script>
+  function roundNumber() {
+    var errMsg = "Invalid input. Please enter a number with at least 4 decimal positions";
+    if ( isNaN(document.getElementById("number").value) || (document.getElementById("number").value) == "" )
+    {
+      document.getElementById("errOut").innerHTML = errMsg;
+    }
+    else {
+      var num = parseFloat(document.getElementById("number").value);
+
+      document.myForm.output.value =
+      "The entered number: " + num +
+      "\n rounded to the nearest integer using mathRound: " +
+      roundToIntegerRound(num) +
+      "\n rounded to the nearest integer using mathFloor: " +
+      roundToIntegerFloor(num) +
+      "\n square root calculated and rounded to the nearest integer: " +
+      squareRootToRound(num) +
+      "\n rounded to the nearest tenth using toFixed and matFloor : " +
+      num.toFixed(1) +
+      "\n rounded to the nearest hundredth using toFixed and mathFloor: " +
+      num.toFixed(2) +
+      "\n rounded to the nearest thousandth using toFixed and mathFloor: " +
+      num.toFixed(3);
+    }
+  }
+
+  function roundToIntegerRound(numInput) {
+    return (Math.round(numInput));
+  }
+
+  function roundToIntegerFloor(numInput) {
+    return (Math.floor(numInput + .5));
+  }
+
+  function roundToTenthsMathFloor(numInput) {
+   	return Math.floor(numInput * 10 + .5) / 10;
+  }
+
+  function roundToHundredthsMathFloor(numInput) {
+    return Math.floor(numInput * 100 + .5)/100;
+  }
+
+  function roundToThousandthsMathFloor(numInput) {
+   	return Math.floor(numInput * 1000 + .5) / 1000;
+  }
+
+  function squareRootToRound(numInput) {
+   	return (Math.sqrt(numInput).toFixed());
+  }
+
+  function res() {
+    document.getElementById("errOut").innerHTML="";
+    document.getElementById("number").focus();
+                      }
+ </script>
+
+</head>
+
+<body onload="document.getElementById('number').focus();">
+
+  <div class="content">
+    <nav>
+      <a href="part1hw6.html">Part 1</a> -
+      <a href="part2hw6.html">Part 2</a> -
+      <a href="part3hw6.html">Part 3</a>
+    </nav>
+
+    <header><h1>CNIT 133 Homework 6 Objects</h1></header>
+    <h3>Using Math.round, Math.sqrt and Math.floor</h3>
+
+    <form name="myForm">
+      Please enter a number with at least 4 decimal positions: <br>
+      <input type="text" size="30" id="number">
+      <input type="button" value="Round" onclick="roundNumber()">
+      <input type="reset" value="Reset" onClick="res();"><br>
+      <textarea name = "output" rows = "8" cols = "80" readonly>
+      </textarea><br>
+    </form>
+
+    <div id="errOut"></div>
+
+    <p class="title">Part 1 - Function that uses Math.round, Math.sqrt and Math.floor.</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw6JS/indexhw6.html">Back to CNIT133 Homework Page</a>
+    </p>
+  </div>
+</body>
+</html>
