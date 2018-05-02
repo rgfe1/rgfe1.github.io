@@ -1,0 +1,65 @@
+html,body,header,nav,table,tr,td,div,ul,li,h1,h3,p,a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+body {
+  font-size: 1em;
+  margin-top: 50px;
+  text-align: center;
+  color: #8D80AD;
+  background-color: #ccffff;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Times New Roman', sans-serif;
+}
+.contentNavBar {
+  background-color: #ffffff;
+  max-width: 1000px;
+  border : #8D80AD dashed 1.5px;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+p {
+  padding-top: 20px;
+  font-size: 1.2em;
+  padding-bottom: 5px;
+}
+.navDropDownMenu {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 150px;
+  margin-top: 15px;
+  padding-left: 50px;
+}
+ul {
+  list-style:none;
+  padding-left:0;
+}
+nav { background: #fff; }
+nav li { list-style-type: none;}
+nav ul { text-align: left; }
+nav ul li { float: left; display: inline; }
+nav ul li:hover { background: #ccc; }
+nav ul li a { display: block; padding: 5px 5px; color: #444; text-decoration: none;}
+nav ul li ul { position: absolute; width: 100px; background: #FFF; }
+nav ul li ul li { width: 100%; }
+nav ul li ul li a { display: block; padding: 5px 10px; color: #444;}
+nav ul li ul li:hover a { background: #ccc; }
+p a {text-decoration: none;}
+p a:link {
+  color: #544C67;
+}
+p a:visited {
+  color: #8D80AD;
+}
+p a:hover {
+  color: #544C67;
+}
