@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=" CNIT133 Homework 7, Object Model and Miscellaneous jQuery">
+  <title>CNIT 133 - Homework 7</title>
+  <link rel="stylesheet" type = "text/css" href="stylehw7.css">
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+  $(document).ready(function () {
+	/* Change background color and font color of div="changing" contents and swap image */
+	$("#radiogreen").click(function () {
+		$("#changing").css({
+			"background-color": "#7cb247",
+			"color": "#FFFFFF",
+		});
+	});
+	$("#radiopurple").click(function () {
+		$("#changing").css({
+			"background-color": "#e9d5ea",
+			"color": "#00088b"
+		});
+	});
+	$("#radioyellow").click(function () {
+		$("#changing").css({
+			"background-color": "#ffff7f",
+			"color": "#000001"
+		});
+	});
+	$("#radiomint").click(function () {
+		$("#changing").css({
+			"background-color": "#98ff98",
+			"color": "#FF0000"
+		});
+	});
+	//Change the font-family of div="changing" contents */
+	$("#helveticabtn").click(function () {
+		$("#changing").css({
+			"font-family": "Helvetica Roman"
+		});
+	});
+	$("#palatinobtn").click(function () {
+		$("#changing").css({
+			"font-family": "Palatino"
+		});
+	});
+	$("#arialbtn").click(function () {
+		$("#changing").css({
+			"font-family": "Arial"
+		});
+	});
+	$("#verdanabtn").click(function () {
+		$("#changing").css({
+			"font-family": "Verdana"
+		});
+	});
+	/* Change the font-size of div="changing" contents */
+	$("#fontSize").change(function () {
+		$("#changing").css($(this).attr("name"), $(this).val());
+	});
+	/*Change the font-style of div="changing" contents */
+	$("#fontStyle").change(function () {
+		$("#changing").css($(this).attr("name"), $(this).val());
+	});
+	/*Change the font-style of div="changing" contents */
+	$("#fontWeight").change(function () {
+		$("#changing").css($(this).attr("name"), $(this).val());
+	});
+	/* Reload page back to original */
+	$('#origbtn').click(function () {
+		$("#fontSize").val(""); // Selects the font-size that has a value of ""
+		location.reload();
+    });
+  });
+  </script>
+<body>
+  <div class="content">
+    <nav>
+      <a href="part1hw7.html">Part 1</a> -
+      <a href="part2hw7.html">Part 2</a> -
+      <a href="part3hw7.html">Part 3</a>
+    </nav>
+    <header><h1>CNIT 133 Homework 7 Object Model and Event Model</h1></header>
+    <h3>Using className property</h3>
+    <form name="form">
+      <div id="changing">
+        Lorem ipsum dolor sit amet, ne prima nobis duo, id nullam possit pertinax quo.
+        <br /> Omnis splendide evertitur eum ea, vim tation soluta id.
+        <br /> Mel mandamus adipiscing in. No vidit reprimique vel, facete aliquam veritus et per, clita deseruisse cum an.
+        <br /> Eos populo scriptorem in, libris fabellas efficiendi cu per. Sit ei mutat munere utroque.
+      </div>
+      <br />
+      <br />
+      <table>
+        <tr>
+          <td colspan="4">
+              <p class="twoPartsTable">Select background and text colors:</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Background: Green
+              <br> Text: White
+              <br>
+              <input type="radio" name="style" id="radiogreen">Click me
+            </label>
+          </td>
+          <td>
+            <label>Background: Purple
+              <br> Text: Blue
+              <br>
+              <input type="radio" name="style" id="radiopurple">Click me
+            </label>
+          </td>
+          <td>
+            <label>Background: Yellow
+              <br> Text: Black
+              <br>
+              <input type="radio" name="style" id="radioyellow">Click me
+            </label>
+          </td>
+          <td>
+            <label>Background: Mint
+              <br> Text: Red
+              <br>
+              <input type="radio" name="style" id="radiomint">Click me
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p class="twoPartsTable">Select a typeface:</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="Change to Helvetica" id="helveticabtn">
+          </td>
+          <td>
+            <input type="button" value="Change to Palatino" id="palatinobtn">
+          </td>
+          <td>
+            <input type="button" value="Change to Arial" id="arialbtn">
+          </td>
+          <td>
+            <input type="button" value="Change to Verdana" id="verdanabtn">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p class="twoPartsTable">Select a font size, style and weight:</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fontSize">Change Font Size:</label>
+            <select name="fontSize" id="fontSize">
+              <option value="" selected>Select one</option>
+              <option value="12px">12px</option>
+              <option value="16px">16px</option>
+              <option value="20px">20px</option>
+            </select>
+          </td>
+          <td>
+            <label for="fontStyle">Change Font Style:</label>
+            <select name="fontStyle" id="fontStyle">
+              <option value="" selected>Select one</option>
+              <option value="normal">Normal</option>
+              <option value="italic">Italic</option>
+              <option value="oblique">Oblique</option>
+            </select>
+          </td>
+          <td colspan="2">
+            <label for="fontWeight">Change Font Weight:</label>
+            <br>
+            <select name="fontWeight" id="fontWeight">
+              <option value="" selected>Select one</option>
+              <option value="normal">Normal</option>
+              <option value="light">Light</option>
+              <option value="bold">Bold</option>
+              <option value="bolder">Bolder</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p class="resetOrig">Reset to original format:</p>
+          </td>
+            <td colspan="2">
+            <input type="button" value="Change to original style" id="origbtn">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <p class="title">Part 1 - Selecting a page layout and formatting through the use of the className property.</p>
+    <p>
+      <a href="https://rgfe1.github.io/homeworkPage/hw7JS/indexhw7.html">Back to CNIT133 Homework Page</a>
+    </p>
+  </div>
+</body>
+</html>
