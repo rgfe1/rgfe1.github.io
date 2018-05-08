@@ -12,20 +12,11 @@
   <link rel="stylesheet" href="source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
   <script src="source/jquery.fancybox.pack.js?v=2.1.7"></script>
   
-  <script>
-  $(document).ready(function() {
-    $('#gallery a').fancybox({
-      overlayColor: '#060',
-      overlayOpacity: .3,
-      transitionIn: 'elastic',
-      transitionOut: 'elastic',
-      easingIn: 'easeInSine',
-      easingOut: 'easeOutSine',
-      titlePosition: 'outside' ,
-      cyclic: true
-    });
-  }); // end ready
-  </script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 </head>
 <body>
   <div class="content">
