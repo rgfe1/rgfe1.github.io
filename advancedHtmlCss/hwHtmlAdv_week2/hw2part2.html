@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Working with Flexboxes</title>
+  <meta charset="utf-8">
+  <meta name="description" content="working with Flexboxes in CNIT 132A">
+  <style>
+    .page-layout {
+      display: flex;
+      flex-flow: row wrap;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .page-layout>* {
+      padding: 10px;
+      flex: 1 100%;
+    }
+
+    .header {
+      background-color: coral;
+    }
+
+    .footer {
+      background-color: lightgreen;
+      padding: 0px;
+
+    }
+
+    .main {
+      background-color: darkblue;
+      color: white;
+      text-align: left;
+
+    }
+
+    .main-2 {
+      background-color: violet;
+      color: blue;
+
+    }
+
+    .aside-1 {
+      background: yellow;
+    }
+
+    .aside-2 {
+      background: pink;
+    }
+
+    @media all and (min-width: 600px) {
+      .aside {
+        flex: 1 auto;
+      }
+    }
+
+    @media all and (min-width: 800px) {
+      .main {
+        flex: 2 0px;
+      }
+      .aside-1 {
+        order: 1;
+      }
+      .main {
+        order: 2;
+      }
+      .main-2 {
+        order: 3;
+      }
+      .aside-2 {
+        order: 4;
+      }
+      .footer {
+        order: 5;
+      }
+    }
+
+    body {
+      padding: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-layout">
+    <header class="header">Name of Company</header>
+    <div class="main">
+      <p>This is the main article of my page! This is the main content of the page. In a 3-column layout, it should be shown in the middle between the aside 1 and aside 2!</p>
+    </div>
+    <div class="main main-2">
+      <p>This column was created to have some content as a challange to adapt the old 3-column layout to a 4-column layout</p>
+    </div>
+    <aside class="aside aside-1">This is the aside 1</aside>
+    <aside class="aside aside-2">This is the aside 2</aside>
+    <footer class="footer">
+      <p>This is the footer<br> Copyright &copy; 2018</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
