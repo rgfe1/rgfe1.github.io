@@ -1,7 +1,7 @@
 body{
   background-color: white;
   color: #444444;
-  font-style: "times new roman", Verdana, Arial, sans-serif;
+  font-family: "times new roman", Verdana, Arial, sans-serif;
   font-size: 1.2em;
 }
 #wrapper{
@@ -21,7 +21,7 @@ body{
   height: auto;
   background-color: #4C4C70;
   color: white;
-  font-style: "times new roman", Verdana, Arial, sans-serif;
+  font-family: "times new roman", Verdana, Arial, sans-serif;
   line-height: 16px;
   margin-bottom: 0;
   padding-left: 10px;
@@ -70,7 +70,7 @@ a:hover{
 #footer{
   font-size: 75%;
   font-style: italic;
-  font-style: "times new roman", Verdana, Arial, sans-serif;
+  font-family: "times new roman", Verdana, Arial, sans-serif;
 }
 img{
   float: left;
