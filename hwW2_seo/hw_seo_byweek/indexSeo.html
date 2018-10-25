@@ -4,9 +4,9 @@
 <head>
   <title>Monika's Homepage; her motivations, skills and career expectations</title>
   <meta property="og:title" content="Monika Andrea Nino website">
-  <meta property="og:url" content="http://www.cdasilva.info">
+  <meta property="og:url" content="https://rgfe1.github.io/hwW2_seo/hw_seo_byweek/indexSeo.html">
   <meta property="og:description" content="Website with information about classes taken by Monika Andrea Nino, her skills, career expectations and how to contact her">
-  <meta property="og:image" content="http://www.cdasilva.info/images/social/MyPicture.jpg">
+  <meta property="og:image" content="https://rgfe1.github.io/hwW2_seo/hw_seo_byweek/yellowFlowers.jpg">
 
   <meta name="description" content="Monika's main page - Monika holds a BS in Engineering; she is trying to transition careers towards tech and web development. Some of her skills include HTML/CSS, Javascript, and SEO Techniques" />
   <meta charset="utf-8">
@@ -17,6 +17,16 @@
 </head>
 
 <body>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <div id="wrapper">
     <div id="header">
       <h1>Welcome to Monika's Webpage!</h1>
@@ -32,7 +42,6 @@
   </a>
       </div>
 
-
       <div id="content">
         <img src="yellowFlowers.jpg" alt="flowers that represent color, life, light">
         <p> <span class="boldInfo">Mi name is Monika.</span> I have a degree in Engineering but am trying to transition careers towards tech and web development. At the moment, I am taking classes to gain the skills necessary to make great websites, web apps,
@@ -41,9 +50,21 @@
         </p>
         <p>I'm really excited to see where these new skills will take me whether I'm eventually developing websites or programming and positively impacting people's lives!
         </p>
-
+        <p>You can find me at:
+          <!-- Your like button code -->
+          <div class="fb-like"
+          data-href="https://rgfe1.github.io/hwW2_seo/hw_seo_byweek/indexSeo.html"
+          data-layout="standard"
+          data-action="like"
+          data-size="small"
+          data-show-faces="false"
+          data-share="true">
+        </div>
         <div id="contact">
-          <p><span class="boldInfo">Fast contact information:</span><br> Mail Address: 111 Moravia Street<br> SF, CA. 94111<br> fe@mail.com | 415-999-7777</p>
+          <p><span class="boldInfo">Fast contact information:</span><br>
+            Mail Address: 111 Moravia Street<br>
+            SF, CA. 94111<br>
+            be@mail.com | 415-999-7777</p>
         </div>
         <div id="footer">
           <p>Copyright &copy; 2018 Personal Website<br> BE
