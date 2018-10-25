@@ -19,13 +19,16 @@
 <body>
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <div id="wrapper">
     <div id="header">
@@ -50,20 +53,11 @@
         </p>
         <p>I'm really excited to see where these new skills will take me whether I'm eventually developing websites or programming and positively impacting people's lives!
         </p>
-          <!-- Your like button code -->
-          <div class="fb-like"
-          data-href="https://rgfe1.github.io/hwW2_seo/hw_seo_byweek/indexSeo.html"
-          data-layout="standard"
-          data-action="like"
-          data-size="small"
-          data-show-faces="false"
-          data-share="true">
+        <!-- Your like button code -->
+        <div class="fb-like" data-href="https://rgfe1.github.io/hwW2_seo/hw_seo_byweek/indexSeo.html" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
         </div>
         <div id="contact">
-          <p><span class="boldInfo">Fast contact information:</span><br>
-            Mail Address: 111 Moravia Street<br>
-            SF, CA. 94111<br>
-            be@mail.com | 415-999-7777</p>
+          <p><span class="boldInfo">Fast contact information:</span><br> Mail Address: 111 Moravia Street<br> SF, CA. 94111<br> be@mail.com | 415-999-7777</p>
         </div>
         <div id="footer">
           <p>Copyright &copy; 2018 Personal Website<br> BE
@@ -71,6 +65,7 @@
         </div>
       </div>
     </div>
+  </div>
     <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -81,7 +76,5 @@
         }
       }
     </script>
-
 </body>
-
 </html>
