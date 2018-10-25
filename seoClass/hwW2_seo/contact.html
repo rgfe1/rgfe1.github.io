@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Monika's contact page. Contact options that users or visitors can use.</title>
+  <meta name="description" content="Users or visitors who want to contact Monika can use the information contained on this page;
+  strategies include using the form, call or email her. Users can select their preferred method. Monika is eager to start a conversion
+  with the users about their needs for webpages, programming in Javascript, HTML and CSS. " />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>Get in Touch</h1>
+    </div>
+    <div id="flexbox">
+      <div class="topnav" id="myTopnav">
+    <a href="indexSeo.html" class="active">Home</a>
+    <a href="skillsEducation.html">Skills and Education</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+      <div id="content">
+        <p> <span class="boldInfo">Hi! </span> The intent of this section is facilitating communication with our users and/or visitors.
+          Please use the form on this page to address any questions you may have about our website or if you would like additional
+          information about our products / services. We will be in touch. Thank you!
+        </p>
+        <div class="container">
+          <form action="action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="email" id="email" name="email" placeholder="Your email..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Questions - Comments?.." style="height:150px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+        <div id="contact">
+          <img src="contact.jpg" alt="Image with a phone, an envelope and an ad symbol that represents contact us">
+          <p><span class="boldInfo">I Suggest...</span><br> The best way to communicate with me is by email. If you would like to send mails to connect with me, please use the following address. I recommend you to email me if you would like to connect quickly.
+            I will respond as soon as possible!<br><br> Mail Address: 111 Moravia Street<br> SF, CA. 94111<br> fe@mail.com | 415-999-7777</p>
+        </div>
+        <div id="footer">
+          <p>Copyright &copy; 2018 Personal Website<br> BE
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</body>
+
+</html>
