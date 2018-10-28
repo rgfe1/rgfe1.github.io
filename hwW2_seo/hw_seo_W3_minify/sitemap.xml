@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://rgfe1.github.io/hwW2_seo/hw_seo_W3_minify/indexSeo.html</loc>
+  <lastmod>2018-10-27T19:21:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rgfe1.github.io/hwW2_seo/hw_seo_W3_minify/skillsEducation.html</loc>
+  <lastmod>2018-10-27T19:21:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgfe1.github.io/hwW2_seo/hw_seo_W3_minify/contact.html</loc>
+  <lastmod>2018-10-27T19:21:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
