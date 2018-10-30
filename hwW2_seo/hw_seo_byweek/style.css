@@ -16,7 +16,7 @@ body{
   overflow:hidden;
 }
 #flexbox{
-  display:inline-block;
+/*   display:inline-block; */
 }
 #header {
   width: 100%;
@@ -68,7 +68,7 @@ img{
   float: left;
   margin-right: 20px;
   margin-top: 10px;
-  width: 33%;
+  width: 30%;
   height: auto;
 }
 /* Style inputs, select elements and textareas */
@@ -140,7 +140,7 @@ input[type=submit]  {
   float:left;
   width:22%;
   text-align:center;
-  overflow:auto;
+/*   overflow:auto; */
 }
 .menu a {
  float: right;
@@ -149,7 +149,7 @@ input[type=submit]  {
   background-color:#e5e5e5;
   padding:10px;
   margin-top:7px;
-  display:block;
+  display: in-line block;
   width:100%;
   color:black;
 }
