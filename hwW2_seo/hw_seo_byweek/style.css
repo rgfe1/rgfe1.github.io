@@ -149,7 +149,7 @@ input[type=submit]  {
   background-color:#e5e5e5;
   padding:10px;
   margin-top:7px;
-  display: in-line block;
+  display: inline-block;
   width:100%;
   color:black;
 }
