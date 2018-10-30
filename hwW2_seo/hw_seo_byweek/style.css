@@ -8,7 +8,7 @@ body{
 #wrapper{
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   background-color: rgba(46, 61, 73, 0.1);
