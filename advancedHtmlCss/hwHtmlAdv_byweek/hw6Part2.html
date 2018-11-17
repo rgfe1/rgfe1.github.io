@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Shapes</title>
+  <meta charset="utf-8">
+  <meta name="description" content="using CSS shapes">
+  <style>
+    body {
+      font: 1.2em Helvetica, Arial, sans-serif;
+      background-color: #cfffe5;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .house {
+      float: left;
+      shape-outside: url(house.png);
+      shape-margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Using CSS Shapes</h1>
+  <section class="content">
+    <h2>House Floating Left</h2>
+    <img src="house.png" alt="silhouette of a house" class="house">
+    <p>Cras ullamcorper sit amet sapien non commodo. Fusce dignissim, orci quis semper varius, neque ex vehicula orci, sed sollicitudin urna nibh a massa. Nam vehicula sem est, et tristique orci egestas vitae. Praesent condimentum risus sed lacus tincidunt
+      rhoncus. Nam ultrices feugiat tellus vel vestibulum. Ut mattis vehicula libero sit amet ornare. Aenean ipsum arcu, ornare a neque sed, lacinia elementum massa.
+    </p>
+
+    <p>Vivamus ultricies efficitur risus, a auctor sapien feugiat quis. Donec ut interdum mi, id vehicula ex. Maecenas et ornare neque, et ullamcorper dui. Nullam at nisi finibus, sollicitudin velit sed, porttitor mauris. Sed et facilisis sem, sagittis feugiat
+      urna. Fusce blandit arcu quis sem gravida, finibus consectetur massa varius. Praesent tincidunt at urna nec maximus. Ut lorem augue, pretium at accumsan id, laoreet commodo eros. Cras in arcu tellus. Mauris et ex ac libero porttitor laoreet.
+    </p>
+  </section>
+</body>
+</html>
