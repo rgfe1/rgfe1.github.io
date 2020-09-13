@@ -1,0 +1,83 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-size: 1.2em;
+  color: #8D80AD;
+  font-family: 'Times New Roman', sans-serif;
+}
+header{
+  /* width: 100%; */
+  /* height: auto; */
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+h1{
+  position: relative;
+}
+div, #sectionImg{
+  width: 40%;
+  height: auto;
+  padding-left: 20px;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+}
+div, #aside{
+  width: 60%;
+  height:auto;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.sectionReasons, .technologies, .resources{
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin-top: 10px;
+}
+ul{
+  background-color: #fff;
+  list-style-type: square;
+  margin-left: 10px;
+}
+ul a{
+  letter-spacing: 1.2px;
+  font-size: 1.2em;
+  text-decoration: none;
+  line-height: 41px;
+}
+ul a:link{
+  color: #8D80AD;
+}
+ul a:visited{
+  color: #8D80AD;
+}
+ul a:hover{
+  color: #38E4AE;
+}
+img {
+    float: left;
+    width:280px;
+    max-width: 100%;
+    height: auto;
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+.boldInfo{
+    font-weight: bold;
+}
+#buttonAnimate {
+      font-size:0.875em;
+      padding: 5px;
+      width:50%;
+      color: #8D80AD;
+      font-weight: bolder;
+}
