@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CNIT 133M-Mobile Web w/HTML, CSS And JS</title>
+  <meta name="description" content="Home page CNIT 133M-Mobile Web w/HTML, CSS And JS that holds all the homeworks"/>
+  <meta charset= "utf-8">
+  <link rel="stylesheet" type = "text/css" href="styleHW1A.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#buttonAnimate").click(function(){
+    var h1=$("#mainTitle");
+    h1.css({color :"#38E4AE"});
+    h1.animate({fontSize :"3.0em"});
+    h1.animate({fontSize :"2.5em"});
+    h1.animate({fontSize :"2.0em"});
+    var img=$("#image");
+    img.css({border :"9px solid #38E4AE"});
+  });
+  });
+  </script>
+</head>
+<body>
+  <header id="title">
+    <h1 id="mainTitle">CNIT 133M-Mobile Web w/HTML, CSS And JS</h1>
+  </header>
+  <div id="sectionImg">
+    <img src="homeOptimized.jpg" alt="Yellow and white flowers close to the ocean that represent color, life, light" id="image">
+  </div>
+  <div id="aside">
+    <p class="logo2P"> <span class="boldInfo">Hi!</span> Mi name is Francy; I have completed classes in HTML, CSS, Javascript, SQL, and have learned some basic concepts of Apex (Salesforce Dev.) I'm really excited to see where these new skills will take me whether I'm eventually developing websites or programming and positively impacting people's lives</p>
+  </div>
+  <div class="sectionReasons">
+    <p>At the moment, I am taking this class to gain the skills and knowledge in the programming world.</p>
+  </div>
+  <div class="technologies">
+    <h2>Technologies for this class</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </div>
+  <div class="resources">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://cssgridgarden.com/" target="_blank"><span class="boldInfo">Grid Garden:</span></a>A game for learning CSS grid layout: Fun, interesting exercises to practice and learn grid layout</li>
+      <li><a href="https://wave.webaim.org/" target="_blank"><span class="boldInfo">Web Accessibility Tool:</span></a>Test the accessibility of your page using Web Accessibility Tool
+For Microdata, an HTML extended with nested groups of name-value pairs that allows machines (browsers, search engines) to get additional semantics and information related to the content</li>
+    </ul>
+  </div>
+  <div>
+  <button id="buttonAnimate">Start Animation</button>
+  </div>
+</body>
+</html>
