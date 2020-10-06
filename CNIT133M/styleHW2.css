@@ -94,14 +94,11 @@ p{
 	}
 
 	div.col-right{
-		/* float:right; phone responsive */
-		/* width:352px; phone responsive*/
 		width:480px;
 
 	}
 
 	div.sidebar-left{
-		/* float:left; phone responsive*/
 		padding:0 0.625em;
 		width:480px;	/* when floating content next to each other, applying set widths will make the content play nice with each other. Change the width of the siebar, or take away the width of the above "div.col-right" and see what happens to get a better idea of how widths effect floats */
 	}
@@ -127,12 +124,7 @@ p{
 	}
 
 	.float-left{
-		/* float:left; phone responsive */	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
 		margin:0  0.625em 0.625em 0;
-	}
-
-	.float-right{
-		/* float:right; phone responsive */	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
 	}
 
 	.float-right img{
