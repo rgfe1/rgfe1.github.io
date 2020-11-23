@@ -7,7 +7,7 @@
   "theme_color": "#2A3443",
   "icons": [
     {
-      "src": "icon-512x512.png",
+      "src": "android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
@@ -26,7 +26,8 @@
       "sizes": "16x16",
       "type": "image/png"
       },
-      {"src": "launcher-icon-4x.png",
+      {
+        "src": "android-chrome-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       }
