@@ -1,0 +1,17 @@
+body {
+  font-size: 1.2em;
+  font-family: Arial, Verdana, serif;
+  background-color: #fff;
+}
+h1 {
+  /* color: red ; */
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2em;
+}
+/* no lo tiene sw1  */
+#container {
+  text-align:center;
+  width: 50%;
+  margin: 0 auto;
+}
