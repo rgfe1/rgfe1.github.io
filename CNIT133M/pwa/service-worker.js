@@ -1,6 +1,8 @@
 var CACHE_VERSION = 'PWA';
 var CACHE_FILES = [
        './',
+       'images/lightblue.jpg',
+       'images/lightgold.jpg',
        './styles.css',
        './app.js'
 ];
