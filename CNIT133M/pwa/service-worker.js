@@ -1,8 +1,8 @@
 var CACHE_VERSION = 'PWA';
 var CACHE_FILES = [
-    'images/offline.png',
-    'app.js',
-    'styles.css'
+       './',
+       './styles.css',
+       './app.js'
 ];
 
 self.addEventListener('install', event => {
