@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CNIT 133M-Mobile Web w/HTML, CSS And JS</title>
+  <meta name="description" content="Home page CNIT 133M-Mobile Web w/HTML, CSS And JS - HW4 Service Workers and PWA"/>
+  <meta charset= "utf-8">
+  <link rel="stylesheet" type = "text/css" href="styles.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+function changeTheme(e)
+    {
+        var e = document.getElementById("bg");
+        var strUser = e.options[e.selectedIndex].value;
+        if (strUser == "lightgold")
+        {
+       //  document.body.style.backgroundImage = "url('img_tree.png')";
+            document.body.style.backgroundImage = "url('/Users/Francye/Documents/ccsfclasses/js-mobile2020/workfiles_new/hw4 - copy/images/lightgold.jpg')";
+        }
+        else if (strUser == "lightblue")
+        {
+            document.body.style.backgroundImage = "url('/Users/Francye/Documents/ccsfclasses/js-mobile2020/workfiles_new/hw4 - copy/images/lightblue.jpg')";
+        }
+        else{
+        console.log("inside else");
+        }
+    }
+    </script>
+
+
+</head>
+<body>
+  <header class="center">
+    <h1>Main Characteristics of a PWA (Progressive Web Application)</h1>
+  </header>
+  <main>
+  <div class="container">
+    <p>Connectivity independence: Progressive web applications can work both offline and on low-quality networks.</p>
+    <p>App-like interface: These apps mimic navigation and interactions of native apps.</p>
+    <p>Safety: These apps are served through HTTPS, so unauthorized users can’t access their content.</p>
+    <p>Self-updates: Able to update themselves automatically, apps stay fresh.</p>
+  <form>
+      <select name="bg" id="bg" onchange="changeTheme()">
+      <option value="default">Select Background Image</option>
+      <option value="lightgold">lightgold</option>
+      <option value="lightblue">lightblue</option>
+      </select>
+  </form>
+
+  </div>
+</main>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+
+  document.querySelector('#show').addEventListener('click', () => {
+    const iconUrl = document.querySelector('select').selectedOptions[0].value;
+    let imgElement = document.createElement('img');
+    imgElement.src = iconUrl;
+    document.querySelector('#container').appendChild(imgElement);
+  });
+</script>
+
+<script scr="app.js"></script>
+</body>
+</html>
