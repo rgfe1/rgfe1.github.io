@@ -28,29 +28,6 @@ function changeTheme(e)
     }
     </script>
   
-<!--   <script>
-    if (navigator.serviceWorker){
-      navigator.serviceWorker.register('./service-worker.js', {scope: './about'})
-        .then(function(registration) {
-        // Registration of service worker ok
-        console.log('Registration of service worker successful with scope: ', 
-                    registration.scope);
-      }).catch(function(err) {
-        // Registration of service worker failed
-        console.log('Registration of service worker failed with error: ', err);
-      })
-    } else {
-      console.log('Service Worker is not supported by this browser');
-    }
-  </script> -->
-  
-<!--     <script>
-        if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-    }
-    </script>
- -->
-
 </head>
 <body>
   <header class="center">
@@ -58,10 +35,10 @@ function changeTheme(e)
   </header>
   <main>
   <div class="container">
-    <p>Connectivity independence: Progressive web applications can work both offline and on low-quality networks.</p>
-    <p>App-like interface: These apps mimic navigation and interactions of native apps.</p>
-    <p>Safety: These apps are served through HTTPS, so unauthorized users can’t access their content.</p>
-    <p>Self-updates: Able to update themselves automatically, apps stay fresh.</p>
+    <p><span class="boldInfo">Connectivity independence:</span> Progressive web applications can work both offline and on low-quality networks.</p>
+    <p><span class="boldInfo">App-like interface:</span> These apps mimic navigation and interactions of native apps.</p>
+    <p><span class="boldInfo">Safety:</span> These apps are served through HTTPS, so unauthorized users can’t access their content.</p>
+    <p><span class="boldInfo">Self-updates:</span> Able to update themselves automatically, apps stay fresh.</p>
   <form>
       <select name="bg" id="bg" onchange="changeTheme()">
       <option value="default">Select Background Image</option>
