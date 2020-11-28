@@ -1,8 +1,13 @@
 var CACHE_VERSION = 'PWA';
 var CACHE_FILES = [
-//        './',
+       './',
+       './index.html',
        'images/lightblue.jpg',
        'images/lightgold.jpg',
+       'android-chrome-192x192.png',
+       'android-chrome-512x512.png',
+       'favicon-16x16.png',
+       'favicon-32x32.png',
        './styles.css',
        './app.js'
 ];
