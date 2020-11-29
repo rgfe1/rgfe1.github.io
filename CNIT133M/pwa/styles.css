@@ -9,11 +9,11 @@ h1 {
   font-style: italic;
   margin-bottom: 2em;
 }
-.container {
+/*.container {
   text-align:center;
   width: 50%;
-  margin: 0 auto;
-}
+  margin: 0 auto; 
+} */
 .boldInfo{
     font-weight: bold;
 }
