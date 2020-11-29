@@ -4,6 +4,7 @@
   <title>CNIT 133M-Mobile Web w/HTML, CSS And JS</title>
   <meta name="description" content="Home page CNIT 133M-Mobile Web w/HTML, CSS And JS - HW4 Service Workers and PWA"/>
   <meta charset= "utf-8">
+  <meta name="theme-color" content="#d9b504"/>
   <link rel="stylesheet" type = "text/css" href="styles.css">
   <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +28,15 @@ function changeTheme(e)
         }
     }
     </script>
+  <script>
+            window.addEventListener('error', function(error) {
+                if (ChromeSamples && ChromeSamples.setStatus) {
+                    console.error(error);
+                    ChromeSamples.setStatus(error.message + ' (Sorry, your browser may not support this feature.)');
+                    error.preventDefault();
+                }
+            });
+  </script>
   
 </head>
 <body>
