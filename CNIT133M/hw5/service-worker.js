@@ -8,7 +8,7 @@ var CACHE_FILES = [
        'android-chrome-512x512.png',
        'favicon-16x16.png',
        'favicon-32x32.png',
-       './styles.css',
+       './style.css',
        './app.js'
 ];
 
