@@ -1,0 +1,81 @@
+body {
+    background: #eee ;
+}
+.navbar{
+    background: #AA8B32;
+}
+.footer {
+    background: #AA8B32;
+    color: white;
+}
+.card-header{
+    background-color: #D4AF37;
+}
+.card-body{
+    background-color: #E6E6FA;
+}
+.one{
+    padding-top: 30px;
+}
+h5{
+  color: #956F00;
+  letter-spacing: 1.2px;
+  line-height: 41px;
+  font-weight: bolder;
+}
+ul{
+  background-color: #F0F0FC;
+  list-style-type: square;
+  margin-left: 10px;
+}
+ul a{
+  letter-spacing: 1.2px;
+  font-size: 1em;
+  text-decoration: none;
+  line-height: 41px;
+}
+ul a:link{
+  color: #8D80AD;
+}
+ul a:visited{
+  color: #8D80AD;
+}
+ul a:hover{
+  color: #38E4AE;
+}
+
+/* .contact {
+    background-color: violet;
+} */
+/* .site-hero {
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; }
+.site-hero, .site-hero .row {
+    height: 65vh;
+    }
+
+.site-hero h1 {
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px white;
+    display: block;
+color: blueviolet}
+ */
+
+
+@media (min-width: 768px) {
+    .site-hero h1 {
+        font-size: 70px; } }
+
+#mapid { height: 360px; }
+#map {
+
+    height: 400px;
+}
+#mapidd {
+    height: 400px;
+}
