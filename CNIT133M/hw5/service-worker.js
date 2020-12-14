@@ -7,12 +7,12 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
        './',
        'index.html',
-       'images/lightblue.jpg',
-       'images/lightgold.jpg',
-       'android-chrome-192x192.png',
-       'android-chrome-512x512.png',
-       'favicon-16x16.png',
-       'favicon-32x32.png',
+//        'images/lightblue.jpg',
+//        'images/lightgold.jpg',
+       'images/android-chrome-192x192.png',
+       'images/android-chrome-512x512.png',
+       'images/favicon-16x16.png',
+       'images/favicon-32x32.png',
        'style.css',
        'app.js'
 
