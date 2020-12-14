@@ -24,35 +24,12 @@
 <body>
 <nav class="navbar navbar-expand-lg sticky-top  navbar-dark">
 
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon "></span>
-  </button> -->
   <a class="navbar-brand mx-auto" href="index.html">Report #1 - Comparison</a>
-  <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mx-auto ">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="products.html">PRODUCTS </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">CONTACT US </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="location.html">LOCATION </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="wurfl.html">WURFL </a>
-      </li>
-    </ul>
-  </div> -->
 </nav>
 
 <section class="one">
   <div class="container">
-<h4>Research on the alternatives of using PhoneGap or PhoneGap Build.</h4>
+<h4>Research on the alternatives of using PhoneGap or PhoneGap Build</h4>
     <ul>
       <li><strong>Technologies to compare:</strong> Ionic, React Native, and Flutter</li>
       <li><strong>Addressed to:</strong> Administration of developers</li>
@@ -304,61 +281,6 @@
       };
 </script> -->
   
-<!-- </script>
-  if (navigator.serviceWorker){
-    navigator.serviceWorker.register('./service-worker.js', {scope: './about'})
-    .then(function(registration) {
-    // Registration of service worker ok
-    console.log('Registration of service worker successful with scope: ', registration.scope);
-    }).catch(function(err) {
-    // Registration of service worker failed
-    console.log('Registration of service worker failed with error: ', err);
-    })
-    } else {
-    console.log('Service Worker is not supported by this browser');
-    }
-  </script> -->
-
-  
-<!--   <script>
-    var CACHE = 'cache-and-update';
-self.addEventListener('install', function(evt) {
-  console.log('The service worker is being installed.');
-  evt.waitUntil(precache());
-});
-self.addEventListener('fetch', function(evt) {
-  console.log('The service worker is serving the asset.');
-
-  evt.respondWith(fromCache(evt.request));
-  evt.waitUntil(update(evt.request));
-});
-function precache() {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.addAll([
-      './index.html',
-      './style.css',
-      './app.js',
-      './asset'
-    ]);
-  });
-}
-function fromCache(request) {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      return matching || Promise.reject('no-match');
-    });
-  });
-}
-function update(request) {
-  return caches.open(CACHE).then(function (cache) {
-    return fetch(request).then(function (response) {
-      return cache.put(request, response);
-    });
-  });
-}
-  </script> -->
-  
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
