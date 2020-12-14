@@ -1,6 +1,6 @@
 {
   "short_name": "Research App Tech",
-  "name": "My great PWA App",
+  "name": "Research App",
   "display": "standalone",
   "background_color": "#2A3443",
   "description": "A demo app for CNIT class",
