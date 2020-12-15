@@ -17,7 +17,7 @@ body {
 .one{
     padding-top: 30px;
 }
-.btn btn-link {
+button {
   color: #956F00;
   letter-spacing: 1.2px;
   line-height: 41px;
